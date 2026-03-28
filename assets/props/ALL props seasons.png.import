@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddli0bogfig88"
-path="res://.godot/imported/props water.png-51813d30101c504cd99af1609bf69388.ctex"
+uid="uid://daxxc2o3mt1c5"
+path="res://.godot/imported/ALL props seasons.png-75e6c0371f6c648d74487d579de58aa8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tilesets/props water.png"
-dest_files=["res://.godot/imported/props water.png-51813d30101c504cd99af1609bf69388.ctex"]
+source_file="res://assets/props/ALL props seasons.png"
+dest_files=["res://.godot/imported/ALL props seasons.png-75e6c0371f6c648d74487d579de58aa8.ctex"]
 
 [params]
 

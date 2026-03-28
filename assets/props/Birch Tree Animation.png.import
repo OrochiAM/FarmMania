@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daxxc2o3mt1c5"
-path="res://.godot/imported/ALL props seasons.png-e4e38555e2f9a5f4aaf85eebeb9581f7.ctex"
+uid="uid://b07qnh7flgmp1"
+path="res://.godot/imported/Birch Tree Animation.png-4854d638a4ef5f1600857c663e3f6834.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tilesets/ALL props seasons.png"
-dest_files=["res://.godot/imported/ALL props seasons.png-e4e38555e2f9a5f4aaf85eebeb9581f7.ctex"]
+source_file="res://assets/props/Birch Tree Animation.png"
+dest_files=["res://.godot/imported/Birch Tree Animation.png-4854d638a4ef5f1600857c663e3f6834.ctex"]
 
 [params]
 

@@ -2,9 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://uc75e8qv2ql0" path="res://assets/tilesets/Water.png" id="1_tjtrf"]
 [ext_resource type="Texture2D" uid="uid://c1y0kcf8fic4y" path="res://assets/tilesets/Tileset Grass Spring.png" id="2_tkbyn"]
-[ext_resource type="Texture2D" uid="uid://daxxc2o3mt1c5" path="res://assets/tilesets/ALL props seasons.png" id="3_7cqdy"]
-[ext_resource type="Texture2D" uid="uid://b07qnh7flgmp1" path="res://assets/props/tree/Birch Tree Animation.png" id="4_pudl8"]
-[ext_resource type="Texture2D" uid="uid://ddli0bogfig88" path="res://assets/tilesets/props water.png" id="5_pudl8"]
+[ext_resource type="PackedScene" uid="uid://d0ggq5sevtafm" path="res://scenes/houses/house.tscn" id="2_uk42g"]
+[ext_resource type="Texture2D" uid="uid://daxxc2o3mt1c5" path="res://assets/props/ALL props seasons.png" id="4_uk42g"]
+[ext_resource type="Texture2D" uid="uid://b07qnh7flgmp1" path="res://assets/props/Birch Tree Animation.png" id="5_yewih"]
+[ext_resource type="Texture2D" uid="uid://ddli0bogfig88" path="res://assets/props/props water.png" id="6_8yb5x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tkbyn"]
 texture = ExtResource("1_tjtrf")
@@ -14,6 +15,9 @@ texture = ExtResource("1_tjtrf")
 0:0/animation_frame_2/duration = 0.2
 0:0/animation_frame_3/duration = 0.2
 0:0/0 = 0
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_yewih"]
+scenes/1/scene = ExtResource("2_uk42g")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v1amf"]
 texture = ExtResource("2_tkbyn")
@@ -772,7 +776,7 @@ texture = ExtResource("2_tkbyn")
 2:9/0/terrains_peering_bit/top_side = 1
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uk42g"]
-texture = ExtResource("3_7cqdy")
+texture = ExtResource("4_uk42g")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -800,12 +804,12 @@ texture = ExtResource("3_7cqdy")
 6:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yewih"]
-texture = ExtResource("4_pudl8")
+texture = ExtResource("5_yewih")
 0:3/size_in_atlas = Vector2i(2, 3)
 0:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8yb5x"]
-texture = ExtResource("5_pudl8")
+texture = ExtResource("6_8yb5x")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -891,3 +895,4 @@ sources/3 = SubResource("TileSetAtlasSource_7cqdy")
 sources/4 = SubResource("TileSetAtlasSource_uk42g")
 sources/5 = SubResource("TileSetAtlasSource_yewih")
 sources/7 = SubResource("TileSetAtlasSource_8yb5x")
+sources/1 = SubResource("TileSetScenesCollectionSource_yewih")

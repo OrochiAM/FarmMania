@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b07qnh7flgmp1"
-path="res://.godot/imported/Birch Tree Animation.png-ae547b2a2e183f49ba236c04d00187b4.ctex"
+uid="uid://ddli0bogfig88"
+path="res://.godot/imported/props water.png-039468cf160c76d0a446ac106daea47f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/props/tree/Birch Tree Animation.png"
-dest_files=["res://.godot/imported/Birch Tree Animation.png-ae547b2a2e183f49ba236c04d00187b4.ctex"]
+source_file="res://assets/props/props water.png"
+dest_files=["res://.godot/imported/props water.png-039468cf160c76d0a446ac106daea47f.ctex"]
 
 [params]
 
