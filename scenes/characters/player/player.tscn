@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://c0efwoi58cq8q"]
 
+[ext_resource type="Script" uid="uid://dest0iijxpieb" path="res://scenes/characters/player/player.gd" id="1_42irl"]
 [ext_resource type="Texture2D" uid="uid://cwy2y44eepqi5" path="res://assets/character/Axe.png" id="1_atpat"]
 [ext_resource type="Texture2D" uid="uid://cx1yogb1uclpc" path="res://assets/character/Idle.png" id="2_kqtwu"]
 [ext_resource type="Texture2D" uid="uid://7o36ggkao5gi" path="res://assets/character/Hoe.png" id="3_6eyoc"]
 [ext_resource type="Texture2D" uid="uid://d4lgx6jneyl7g" path="res://assets/character/Walk.png" id="4_eojnx"]
 [ext_resource type="Texture2D" uid="uid://bvrm2bil10se2" path="res://assets/character/Watering.png" id="5_qgnko"]
+[ext_resource type="Script" uid="uid://74h1b66i2vrk" path="res://scripts/state_machine/node_state_machine.gd" id="6_6avc5"]
+[ext_resource type="Script" uid="uid://d3q7n4gytgrwm" path="res://scenes/characters/player/idle_state.gd" id="7_mk55u"]
+[ext_resource type="Script" uid="uid://bt4k84hnbxvtv" path="res://scenes/characters/player/walk_state.gd" id="8_xuses"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7vyk4"]
 atlas = ExtResource("1_atpat")
@@ -953,6 +957,7 @@ animations = [{
 radius = 9.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1121361212]
+script = ExtResource("1_42irl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1760184816]
 position = Vector2(0, -10)
@@ -963,3 +968,17 @@ autoplay = "idle_front"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1174020197]
 position = Vector2(0, -9)
 shape = SubResource("CircleShape2D_atpat")
+
+[node name="StateMachine" type="Node" parent="." unique_id=87061259 node_paths=PackedStringArray("initial_node_state")]
+script = ExtResource("6_6avc5")
+initial_node_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=663228842 node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("7_mk55u")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+
+[node name="Walk" type="Node" parent="StateMachine" unique_id=732488161 node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("8_xuses")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../AnimatedSprite2D")
