@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://uc75e8qv2ql0" path="res://assets/tilesets/Water.png" id="1_tjtrf"]
 [ext_resource type="Texture2D" uid="uid://c1y0kcf8fic4y" path="res://assets/tilesets/Tileset Grass Spring.png" id="2_tkbyn"]
 [ext_resource type="PackedScene" uid="uid://d0ggq5sevtafm" path="res://scenes/houses/house.tscn" id="2_uk42g"]
+[ext_resource type="PackedScene" uid="uid://0kqbm7bfmmdx" path="res://scenes/objects/trees/small_tree.tscn" id="3_yewih"]
 [ext_resource type="Texture2D" uid="uid://daxxc2o3mt1c5" path="res://assets/props/ALL props seasons.png" id="4_uk42g"]
 [ext_resource type="Texture2D" uid="uid://b07qnh7flgmp1" path="res://assets/props/Birch Tree Animation.png" id="5_yewih"]
 [ext_resource type="Texture2D" uid="uid://ddli0bogfig88" path="res://assets/props/props water.png" id="6_8yb5x"]
@@ -18,6 +19,7 @@ texture = ExtResource("1_tjtrf")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_yewih"]
 scenes/1/scene = ExtResource("2_uk42g")
+scenes/2/scene = ExtResource("3_yewih")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v1amf"]
 texture = ExtResource("2_tkbyn")
