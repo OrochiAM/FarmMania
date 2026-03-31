@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://cvrg6eqcdwprt"]
 
+[ext_resource type="Shader" uid="uid://df6iu325l8fld" path="res://scenes/objects/trees/tree_shake.gdshader" id="1_f4wgc"]
 [ext_resource type="Texture2D" uid="uid://b07qnh7flgmp1" path="res://assets/props/Birch Tree Animation.png" id="1_ivetc"]
-[ext_resource type="Script" uid="uid://77vhfblpe25w" path="res://scenes/objects/trees/small_tree.gd" id="2_f4wgc"]
+[ext_resource type="Script" uid="uid://77vhfblpe25w" path="res://scenes/objects/trees/tree.gd" id="2_f4wgc"]
 [ext_resource type="PackedScene" uid="uid://bmvobgejlski7" path="res://scenes/components/hurt_component.tscn" id="2_wjqkr"]
 [ext_resource type="PackedScene" uid="uid://cyvinkfpap71j" path="res://scenes/components/damage_component.tscn" id="3_f4wgc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6vpey"]
+resource_local_to_scene = true
+shader = ExtResource("1_f4wgc")
+shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_speed = 20.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6vpey"]
 atlas = ExtResource("1_ivetc")
@@ -16,6 +23,7 @@ size = Vector2(11, 15)
 size = Vector2(11, 29)
 
 [node name="LargeTree" type="Sprite2D" unique_id=1986097447]
+material = SubResource("ShaderMaterial_6vpey")
 position = Vector2(0, -22)
 texture = SubResource("AtlasTexture_6vpey")
 script = ExtResource("2_f4wgc")
