@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cvrg6eqcdwprt"]
+
+[ext_resource type="Texture2D" uid="uid://b07qnh7flgmp1" path="res://assets/props/Birch Tree Animation.png" id="1_ivetc"]
+[ext_resource type="Script" uid="uid://77vhfblpe25w" path="res://scenes/objects/trees/small_tree.gd" id="2_f4wgc"]
+[ext_resource type="PackedScene" uid="uid://bmvobgejlski7" path="res://scenes/components/hurt_component.tscn" id="2_wjqkr"]
+[ext_resource type="PackedScene" uid="uid://cyvinkfpap71j" path="res://scenes/components/damage_component.tscn" id="3_f4wgc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vpey"]
+atlas = ExtResource("1_ivetc")
+region = Rect2(0, 48, 32, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivetc"]
+size = Vector2(11, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_you1t"]
+size = Vector2(11, 29)
+
+[node name="LargeTree" type="Sprite2D" unique_id=1986097447]
+position = Vector2(0, -22)
+texture = SubResource("AtlasTexture_6vpey")
+script = ExtResource("2_f4wgc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=399376568]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=274828084]
+position = Vector2(-0.5, 15.5)
+shape = SubResource("RectangleShape2D_ivetc")
+
+[node name="HurtComponent" parent="." unique_id=1053897274 instance=ExtResource("2_wjqkr")]
+
+[node name="HurtComponentCollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=1211436936]
+position = Vector2(-0.5, 8.5)
+shape = SubResource("RectangleShape2D_you1t")
+debug_color = Color(0.8201887, 0.28065136, 0.72947156, 0.41960785)
+
+[node name="DamageComponent" parent="." unique_id=931009684 instance=ExtResource("3_f4wgc")]
+max_damage = 3
