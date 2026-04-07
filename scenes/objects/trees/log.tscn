@@ -7,8 +7,8 @@
 atlas = ExtResource("1_bcctm")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2a05"]
-size = Vector2(13, 14)
+[sub_resource type="CircleShape2D" id="CircleShape2D_e2a05"]
+radius = 4.5
 
 [node name="Log" type="Sprite2D" unique_id=422219829]
 texture = SubResource("AtlasTexture_e2a05")
@@ -17,5 +17,5 @@ texture = SubResource("AtlasTexture_e2a05")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectableComponent" unique_id=1470030556]
 position = Vector2(-0.5, 0)
-shape = SubResource("RectangleShape2D_e2a05")
+shape = SubResource("CircleShape2D_e2a05")
 debug_color = Color(0, 0.6483183, 0.19437096, 0.41960785)

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://0kqbm7bfmmdx" path="res://scenes/objects/trees/small_tree.tscn" id="3_yewih"]
 [ext_resource type="PackedScene" uid="uid://cvrg6eqcdwprt" path="res://scenes/objects/trees/large_tree.tscn" id="4_8yb5x"]
 [ext_resource type="Texture2D" uid="uid://daxxc2o3mt1c5" path="res://assets/props/ALL props seasons.png" id="4_uk42g"]
+[ext_resource type="PackedScene" uid="uid://c0dsokq1cc58g" path="res://scenes/objects/rocks/rock.tscn" id="5_xa2g7"]
 [ext_resource type="Texture2D" uid="uid://b07qnh7flgmp1" path="res://assets/props/Birch Tree Animation.png" id="5_yewih"]
 [ext_resource type="Texture2D" uid="uid://ddli0bogfig88" path="res://assets/props/props water.png" id="6_8yb5x"]
 
@@ -22,6 +23,7 @@ texture = ExtResource("1_tjtrf")
 scenes/1/scene = ExtResource("2_uk42g")
 scenes/2/scene = ExtResource("3_yewih")
 scenes/3/scene = ExtResource("4_8yb5x")
+scenes/4/scene = ExtResource("5_xa2g7")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v1amf"]
 texture = ExtResource("2_tkbyn")

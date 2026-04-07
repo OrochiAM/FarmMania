@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://c0dsokq1cc58g"]
+
+[ext_resource type="Texture2D" uid="uid://b6tebt4to3pgf" path="res://assets/props/deep forest stones.png" id="1_aw33s"]
+[ext_resource type="Script" uid="uid://b32rmbbavugs7" path="res://scenes/objects/rocks/rock.gd" id="2_f5itc"]
+[ext_resource type="PackedScene" uid="uid://bmvobgejlski7" path="res://scenes/components/hurt_component.tscn" id="2_msy0l"]
+[ext_resource type="PackedScene" uid="uid://cyvinkfpap71j" path="res://scenes/components/damage_component.tscn" id="3_msy0l"]
+[ext_resource type="Shader" uid="uid://df6iu325l8fld" path="res://scenes/objects/shake.gdshader" id="4_bntui"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bntui"]
+resource_local_to_scene = true
+shader = ExtResource("4_bntui")
+shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_speed = 20.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5itc"]
+atlas = ExtResource("1_aw33s")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bntui"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f5itc"]
+
+[node name="Rock" type="Sprite2D" unique_id=961671087]
+material = SubResource("ShaderMaterial_bntui")
+position = Vector2(0, -10)
+texture = SubResource("AtlasTexture_f5itc")
+script = ExtResource("2_f5itc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1048205002]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=89368484]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_bntui")
+
+[node name="HurtComponent" parent="." unique_id=1053897274 instance=ExtResource("2_msy0l")]
+tool = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=1335800873]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_f5itc")
+debug_color = Color(0.80715007, 0.30917794, 0.70469147, 0.41960785)
+
+[node name="DamageComponent" parent="." unique_id=931009684 instance=ExtResource("3_msy0l")]
+max_damage = 5

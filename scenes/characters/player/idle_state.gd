@@ -32,6 +32,9 @@ func _on_next_transitions() -> void:
 		
 	elif player.current_tool == DataTypes.Tools.TillGround && GameInputEvents.use_tool():
 		transition.emit("Tilling")
+		
+	elif player.current_tool == DataTypes.Tools.PickaxeRock && GameInputEvents.use_tool():
+		transition.emit("Pickaxe")
 
 func _on_enter() -> void:
 	pass

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cvrg6eqcdwprt"]
 
-[ext_resource type="Shader" uid="uid://df6iu325l8fld" path="res://scenes/objects/trees/tree_shake.gdshader" id="1_f4wgc"]
+[ext_resource type="Shader" uid="uid://df6iu325l8fld" path="res://scenes/objects/shake.gdshader" id="1_f4wgc"]
 [ext_resource type="Texture2D" uid="uid://b07qnh7flgmp1" path="res://assets/props/Birch Tree Animation.png" id="1_ivetc"]
 [ext_resource type="Script" uid="uid://77vhfblpe25w" path="res://scenes/objects/trees/tree.gd" id="2_f4wgc"]
 [ext_resource type="PackedScene" uid="uid://bmvobgejlski7" path="res://scenes/components/hurt_component.tscn" id="2_wjqkr"]
@@ -35,6 +35,7 @@ position = Vector2(-0.5, 15.5)
 shape = SubResource("RectangleShape2D_ivetc")
 
 [node name="HurtComponent" parent="." unique_id=1053897274 instance=ExtResource("2_wjqkr")]
+tool = 1
 
 [node name="HurtComponentCollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=1211436936]
 position = Vector2(-0.5, 8.5)
