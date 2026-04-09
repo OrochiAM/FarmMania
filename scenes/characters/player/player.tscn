@@ -773,7 +773,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8y75b")
 }],
-"loop": true,
+"loop": false,
 "name": &"pickaxe_back",
 "speed": 5.0
 }, {
@@ -1160,7 +1160,7 @@ script = ExtResource("1_42irl")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1760184816]
 position = Vector2(0, -10)
 sprite_frames = SubResource("SpriteFrames_0hrcy")
-animation = &"pickaxe_left"
+animation = &"pickaxe_right"
 autoplay = "idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1174020197]

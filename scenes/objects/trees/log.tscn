@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://brjx72pko746v"]
 
-[ext_resource type="Texture2D" uid="uid://dt5qoc78yb3oh" path="res://assets/props/Basic tools and meterials.png" id="1_bcctm"]
+[ext_resource type="Texture2D" uid="uid://dx56v7w0t08vg" path="res://assets/props/Wood.png" id="1_e2a05"]
 [ext_resource type="PackedScene" uid="uid://b0b68ew2bk5x2" path="res://scenes/components/collectable_component.tscn" id="2_e2a05"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e2a05"]
-atlas = ExtResource("1_bcctm")
-region = Rect2(16, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5rqd"]
+atlas = ExtResource("1_e2a05")
+region = Rect2(32, 16, 16, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e2a05"]
 radius = 4.5
 
 [node name="Log" type="Sprite2D" unique_id=422219829]
-texture = SubResource("AtlasTexture_e2a05")
+texture = SubResource("AtlasTexture_s5rqd")
 
 [node name="CollectableComponent" parent="." unique_id=1966618043 instance=ExtResource("2_e2a05")]
 
