@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://diwf3wwxo418n"]
+
+[ext_resource type="Texture2D" uid="uid://1q2kg6gmf5yu" path="res://assets/props/Crops.png" id="1_yfhs1"]
+[ext_resource type="PackedScene" uid="uid://b0b68ew2bk5x2" path="res://scenes/components/collectable_component.tscn" id="2_y4mho"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tclgs"]
+atlas = ExtResource("1_yfhs1")
+region = Rect2(240, 96, 16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nfee4"]
+radius = 4.0
+
+[node name="Pepper" type="Sprite2D" unique_id=981799743]
+y_sort_enabled = true
+texture = SubResource("AtlasTexture_tclgs")
+
+[node name="CollectableComponent" parent="." unique_id=1966618043 instance=ExtResource("2_y4mho")]
+collectable_name = "pepper"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectableComponent" unique_id=1398411975]
+position = Vector2(-2, 2)
+shape = SubResource("CircleShape2D_nfee4")
+debug_color = Color(0.29087663, 0.6137737, 0.4119855, 0.41960785)

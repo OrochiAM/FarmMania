@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://b1ywhqas4ly3a" path="res://scenes/ui/game_ui_theme.tres" id="1_2yiqu"]
 [ext_resource type="Script" uid="uid://5xvp7gdi8fj8" path="res://scenes/ui/tools_panel.gd" id="2_a7ivs"]
 [ext_resource type="Texture2D" uid="uid://2awue3ariiut" path="res://assets/ui/3.png" id="2_xkgdf"]
+[ext_resource type="Texture2D" uid="uid://1q2kg6gmf5yu" path="res://assets/props/Crops.png" id="4_0jxvs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a7ivs"]
 atlas = ExtResource("2_xkgdf")
@@ -32,6 +33,31 @@ load_path = "res://.godot/imported/3.png-7a60549c1a588c78b055e158edbf7ceb.ctex"
 atlas = SubResource("CompressedTexture2D_a6726")
 region = Rect2(144, 0, 19, 16)
 margin = Rect2(3, 1, 0, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6726"]
+atlas = ExtResource("4_0jxvs")
+region = Rect2(160, 304, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3neg6"]
+load_path = "res://.godot/imported/Crops.png-a4978b347d824bc027314423da4bbfa3.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur6ba"]
+atlas = SubResource("CompressedTexture2D_3neg6")
+region = Rect2(160, 96, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bdu3n"]
+load_path = "res://.godot/imported/Crops.png-a4978b347d824bc027314423da4bbfa3.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62b2c"]
+atlas = SubResource("CompressedTexture2D_bdu3n")
+region = Rect2(160, 112, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_icge2"]
+load_path = "res://.godot/imported/Crops.png-a4978b347d824bc027314423da4bbfa3.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1kta"]
+atlas = SubResource("CompressedTexture2D_icge2")
+region = Rect2(16, 32, 16, 16)
 
 [node name="ToolsPanel" type="PanelContainer" unique_id=1004582290]
 offset_right = 38.0
@@ -70,7 +96,39 @@ layout_mode = 2
 theme_type_variation = &"ToolButton"
 icon = SubResource("AtlasTexture_3neg6")
 
+[node name="SeedsWheat" type="Button" parent="MarginContainer/HBoxContainer" unique_id=2078564078]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_type_variation = &"ToolButton"
+icon = SubResource("AtlasTexture_a6726")
+icon_alignment = 1
+
+[node name="SeedsPepper" type="Button" parent="MarginContainer/HBoxContainer" unique_id=679435159]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_type_variation = &"ToolButton"
+icon = SubResource("AtlasTexture_ur6ba")
+icon_alignment = 1
+
+[node name="SeedsCorn" type="Button" parent="MarginContainer/HBoxContainer" unique_id=533732895]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_type_variation = &"ToolButton"
+icon = SubResource("AtlasTexture_62b2c")
+icon_alignment = 1
+
+[node name="SeedsCorn2" type="Button" parent="MarginContainer/HBoxContainer" unique_id=156227791]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_type_variation = &"ToolButton"
+icon = SubResource("AtlasTexture_n1kta")
+icon_alignment = 1
+
 [connection signal="pressed" from="MarginContainer/HBoxContainer/ToolAxe" to="." method="_on_tool_axe_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/ToolPickaxe" to="." method="_on_tool_pickaxe_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/ToolTilling" to="." method="_on_tool_tilling_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/ToolWatering" to="." method="_on_tool_watering_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/SeedsWheat" to="." method="_on_tool_watering_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/SeedsPepper" to="." method="_on_tool_watering_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/SeedsCorn" to="." method="_on_tool_watering_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/SeedsCorn2" to="." method="_on_tool_watering_pressed"]
