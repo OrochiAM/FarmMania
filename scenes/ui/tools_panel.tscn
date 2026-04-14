@@ -60,6 +60,7 @@ atlas = SubResource("CompressedTexture2D_icge2")
 region = Rect2(16, 32, 16, 16)
 
 [node name="ToolsPanel" type="PanelContainer" unique_id=1004582290]
+z_index = 1
 offset_right = 38.0
 offset_bottom = 38.0
 theme = ExtResource("1_2yiqu")
