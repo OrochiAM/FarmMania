@@ -111,14 +111,14 @@ theme_type_variation = &"ToolButton"
 icon = SubResource("AtlasTexture_ur6ba")
 icon_alignment = 1
 
-[node name="SeedsCorn" type="Button" parent="MarginContainer/HBoxContainer" unique_id=533732895]
+[node name="SeedsCabbage" type="Button" parent="MarginContainer/HBoxContainer" unique_id=533732895]
 custom_minimum_size = Vector2(26, 26)
 layout_mode = 2
 theme_type_variation = &"ToolButton"
 icon = SubResource("AtlasTexture_62b2c")
 icon_alignment = 1
 
-[node name="SeedsCorn2" type="Button" parent="MarginContainer/HBoxContainer" unique_id=156227791]
+[node name="SeedsStrawberry" type="Button" parent="MarginContainer/HBoxContainer" unique_id=156227791]
 custom_minimum_size = Vector2(26, 26)
 layout_mode = 2
 theme_type_variation = &"ToolButton"
@@ -129,7 +129,7 @@ icon_alignment = 1
 [connection signal="pressed" from="MarginContainer/HBoxContainer/ToolPickaxe" to="." method="_on_tool_pickaxe_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/ToolTilling" to="." method="_on_tool_tilling_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/ToolWatering" to="." method="_on_tool_watering_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/SeedsWheat" to="." method="_on_tool_watering_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/SeedsPepper" to="." method="_on_tool_watering_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/SeedsCorn" to="." method="_on_tool_watering_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/SeedsCorn2" to="." method="_on_tool_watering_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/SeedsWheat" to="." method="_on_seeds_wheat_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/SeedsPepper" to="." method="_on_seeds_pepper_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/SeedsCabbage" to="." method="_on_seeds_cabbage_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/SeedsStrawberry" to="." method="_on_seeds_strawberry_pressed"]

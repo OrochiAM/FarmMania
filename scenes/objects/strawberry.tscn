@@ -1,18 +1,16 @@
 [gd_scene format=3 uid="uid://dsadg8emrbk7l"]
 
-[ext_resource type="Texture2D" uid="uid://1q2kg6gmf5yu" path="res://assets/props/Crops.png" id="1_skwio"]
+[ext_resource type="Texture2D" uid="uid://0vulhm2iox6e" path="res://assets/props/Strawberry.png" id="1_skwio"]
 [ext_resource type="PackedScene" uid="uid://b0b68ew2bk5x2" path="res://scenes/components/collectable_component.tscn" id="2_wqxet"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8o3hr"]
-atlas = ExtResource("1_skwio")
-region = Rect2(96, 32, 16, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mhl60"]
 radius = 5.0
 
 [node name="Strawberry" type="Sprite2D" unique_id=590485486]
 y_sort_enabled = true
-texture = SubResource("AtlasTexture_8o3hr")
+texture = ExtResource("1_skwio")
+hframes = 7
+frame = 6
 
 [node name="CollectableComponent" parent="." unique_id=1966618043 instance=ExtResource("2_wqxet")]
 collectable_name = "strawberry"

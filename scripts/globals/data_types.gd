@@ -6,6 +6,8 @@ enum Tools {
 	TillGround,
 	WaterCrops,
 	PickaxeRock,
-	PlantCorn,
-	PlantTomato
+	PlantWheat,
+	PlantPepper,
+	PlantCabbage,
+	PlantStrawberry
 }

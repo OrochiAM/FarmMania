@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://uk8io474ju1q" path="res://scenes/objects/wheat.tscn" id="5_h30rg"]
 [ext_resource type="PackedScene" uid="uid://diwf3wwxo418n" path="res://scenes/objects/pepper.tscn" id="6_0jjdr"]
 [ext_resource type="PackedScene" uid="uid://dsadg8emrbk7l" path="res://scenes/objects/strawberry.tscn" id="7_pkvns"]
-[ext_resource type="PackedScene" uid="uid://cnccb8s13blpp" path="res://scenes/objects/corn.tscn" id="8_33f7h"]
+[ext_resource type="PackedScene" uid="uid://cnccb8s13blpp" path="res://scenes/objects/cabbage.tscn" id="8_33f7h"]
 
 [node name="TestSceneTilemap" type="Node2D" unique_id=313022968]
 y_sort_enabled = true

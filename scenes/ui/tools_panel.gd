@@ -5,6 +5,12 @@ extends PanelContainer
 @onready var tool_tilling: Button = $MarginContainer/HBoxContainer/ToolTilling
 @onready var tool_watering: Button = $MarginContainer/HBoxContainer/ToolWatering
 
+@onready var seeds_wheat: Button = $MarginContainer/HBoxContainer/SeedsWheat
+@onready var seeds_pepper: Button = $MarginContainer/HBoxContainer/SeedsPepper
+@onready var seeds_cabbage: Button = $MarginContainer/HBoxContainer/SeedsCabbage
+@onready var seeds_strawberry: Button = $MarginContainer/HBoxContainer/SeedsStrawberry
+
+
 func _on_tool_axe_pressed() -> void:
 	ToolManager.select_tool(DataTypes.Tools.AxeWood)
 	tool_axe.grab_focus()
@@ -20,6 +26,22 @@ func _on_tool_tilling_pressed() -> void:
 func _on_tool_watering_pressed() -> void:
 	ToolManager.select_tool(DataTypes.Tools.WaterCrops)
 	tool_watering.grab_focus()
+
+func _on_seeds_wheat_pressed() -> void:
+	ToolManager.select_tool(DataTypes.Tools.PlantWheat)
+	seeds_wheat.grab_focus()
+
+func _on_seeds_pepper_pressed() -> void:
+	ToolManager.select_tool(DataTypes.Tools.PlantPepper)
+	seeds_pepper.grab_focus()
+
+func _on_seeds_cabbage_pressed() -> void:
+	ToolManager.select_tool(DataTypes.Tools.PlantCabbage)
+	seeds_cabbage.grab_focus()
+
+func _on_seeds_strawberry_pressed() -> void:
+	ToolManager.select_tool(DataTypes.Tools.PlantStrawberry)
+	seeds_strawberry.grab_focus()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
