@@ -46,3 +46,4 @@ position = Vector2(327, 245)
 position = Vector2(296, 261)
 
 [node name="GameScreen" parent="." unique_id=2113923176 instance=ExtResource("9_33f7h")]
+visible = false
