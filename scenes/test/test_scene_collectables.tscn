@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://diwf3wwxo418n" path="res://scenes/objects/pepper.tscn" id="6_0jjdr"]
 [ext_resource type="PackedScene" uid="uid://dsadg8emrbk7l" path="res://scenes/objects/strawberry.tscn" id="7_pkvns"]
 [ext_resource type="PackedScene" uid="uid://cnccb8s13blpp" path="res://scenes/objects/cabbage.tscn" id="8_33f7h"]
+[ext_resource type="PackedScene" uid="uid://b0wwwcsl8wijx" path="res://scenes/ui/game_screen.tscn" id="9_33f7h"]
 
 [node name="TestSceneTilemap" type="Node2D" unique_id=313022968]
 y_sort_enabled = true
@@ -43,3 +44,5 @@ position = Vector2(327, 245)
 
 [node name="Corn" parent="." unique_id=1865127447 instance=ExtResource("8_33f7h")]
 position = Vector2(296, 261)
+
+[node name="GameScreen" parent="." unique_id=2113923176 instance=ExtResource("9_33f7h")]

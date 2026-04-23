@@ -50,7 +50,7 @@ load_path = "res://.godot/imported/Crops.png-a4978b347d824bc027314423da4bbfa3.ct
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_62b2c"]
 atlas = SubResource("CompressedTexture2D_bdu3n")
-region = Rect2(160, 112, 16, 16)
+region = Rect2(16, 144, 16, 16)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_icge2"]
 load_path = "res://.godot/imported/Crops.png-a4978b347d824bc027314423da4bbfa3.ctex"
