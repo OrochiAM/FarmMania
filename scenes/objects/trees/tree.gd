@@ -24,5 +24,5 @@ func on_max_damaged_reached() -> void:
 
 func add_log_scene() -> void:
 	var log_instance = log_scene.instantiate()
-	log_instance.global_position = Vector2(global_position.x, global_position.y + 10)
+	log_instance.global_position = Vector2(global_position.x, global_position.y)
 	get_parent().add_child(log_instance)

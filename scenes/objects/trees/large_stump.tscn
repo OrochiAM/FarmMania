@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b4dljvyh6v26d"]
+
+[ext_resource type="Texture2D" uid="uid://b07qnh7flgmp1" path="res://assets/props/Birch Tree Animation.png" id="1_r1xv2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_183ch"]
+atlas = ExtResource("1_r1xv2")
+region = Rect2(8, 128, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1xv2"]
+size = Vector2(11, 6)
+
+[node name="LargeStump" type="Sprite2D" unique_id=257349827]
+y_sort_enabled = true
+position = Vector2(0, -6)
+texture = SubResource("AtlasTexture_183ch")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1029269621]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=269624623]
+position = Vector2(-0.5, 4)
+shape = SubResource("RectangleShape2D_r1xv2")

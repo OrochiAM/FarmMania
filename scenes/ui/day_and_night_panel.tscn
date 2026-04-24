@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://b1ywhqas4ly3a" path="res://scenes/ui/game_ui_theme.tres" id="1_fnqby"]
 [ext_resource type="Texture2D" uid="uid://v8fnybix24w6" path="res://assets/ui/HUD.png" id="2_25t5k"]
+[ext_resource type="Script" uid="uid://dvjhi6tlcvrk8" path="res://scenes/ui/day_and_night_panel.gd" id="2_xc6ft"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xc6ft"]
 atlas = ExtResource("2_25t5k")
@@ -11,6 +12,7 @@ region = Rect2(278, 2, 8, 12)
 layout_mode = 3
 anchors_preset = 0
 theme = ExtResource("1_fnqby")
+script = ExtResource("2_xc6ft")
 
 [node name="DayPanel" type="PanelContainer" parent="." unique_id=1037496267]
 layout_mode = 0
@@ -25,7 +27,7 @@ theme_override_constants/margin_top = 3
 theme_override_constants/margin_right = 3
 theme_override_constants/margin_bottom = 3
 
-[node name="Label" type="Label" parent="DayPanel/MarginContainer" unique_id=719221054]
+[node name="DayLabel" type="Label" parent="DayPanel/MarginContainer" unique_id=719221054]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_type_variation = &"DayAndNightLabel"
@@ -45,11 +47,11 @@ theme_override_constants/margin_top = 3
 theme_override_constants/margin_right = 3
 theme_override_constants/margin_bottom = 3
 
-[node name="Label" type="Label" parent="TimePanel/MarginContainer" unique_id=1970437331]
+[node name="TimeLabel" type="Label" parent="TimePanel/MarginContainer" unique_id=1970437331]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_type_variation = &"DayAndNightLabel"
-text = "12:00"
+text = "00:00"
 
 [node name="Control" type="Control" parent="." unique_id=187687442]
 anchors_preset = 0
@@ -173,3 +175,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_xc6ft")
 stretch_mode = 5
+
+[connection signal="pressed" from="Control/Normal Speed" to="." method="_on_normal_speed_pressed"]
+[connection signal="pressed" from="Control/FastSpeed" to="." method="_on_fast_speed_pressed"]
+[connection signal="pressed" from="Control/FastSpeed2" to="." method="_on_fast_speed_2_pressed"]
