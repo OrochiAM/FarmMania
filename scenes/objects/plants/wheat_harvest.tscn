@@ -9,8 +9,8 @@ radius = 5.0
 [node name="WheatHarvest" type="Sprite2D" unique_id=916800512]
 y_sort_enabled = true
 texture = ExtResource("1_4bm26")
-hframes = 7
-frame = 6
+hframes = 6
+frame = 5
 
 [node name="CollectableComponent" parent="." unique_id=1966618043 instance=ExtResource("2_0ifl4")]
 collectable_name = "wheat"

@@ -9,8 +9,7 @@ radius = 5.0
 [node name="StrawberryHarvest" type="Sprite2D" unique_id=590485486]
 y_sort_enabled = true
 texture = ExtResource("1_skwio")
-hframes = 7
-frame = 6
+hframes = 6
 
 [node name="CollectableComponent" parent="." unique_id=1966618043 instance=ExtResource("2_wqxet")]
 collectable_name = "strawberry"

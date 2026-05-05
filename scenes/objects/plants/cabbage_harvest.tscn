@@ -9,8 +9,7 @@ radius = 5.0
 [node name="CabbageHarvest" type="Sprite2D" unique_id=1865127447]
 y_sort_enabled = true
 texture = ExtResource("1_amvol")
-hframes = 8
-frame = 7
+hframes = 6
 
 [node name="CollectableComponent" parent="." unique_id=1966618043 instance=ExtResource("2_6qgyt")]
 collectable_name = "cabbage"

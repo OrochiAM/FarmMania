@@ -1,8 +1,8 @@
-class_name GrowtCycleComponent
+class_name GrowthCycleComponent
 extends Node
 
 @export var current_grow_state: DataTypes.GrowthState = DataTypes.GrowthState.Seed
-@export_range(5, 365) var days_until_harvest: int = 7
+@export_range(5, 365) var days_until_harvest: int = 6
 
 signal crop_maturity
 signal crop_harvesting
@@ -20,35 +20,32 @@ func on_time_tick_day(day: int) -> void:
 		if starting_day == 0:
 			starting_day = day
 			
-	growth_states(starting_day, day)
-	harvest_state(starting_day, day)
+		growth_states(starting_day, day)
+		harvest_state(starting_day, day)
 
-func growth_states(day: int, current_day: int):
-	#Kada se zavrsi rast da izadjemo iz f-je
+func growth_states(day: int, current_day: int) -> void:
 	if current_grow_state == DataTypes.GrowthState.Maturity:
 		return
-		
-	var num_states = 5
-	
-	#Racun koliko je dana proslo i koja je to ikonica za biljku
-	var growth_days_passed = (current_day - starting_day) % num_states
-	var state_index = growth_days_passed % num_states
-	
+
+	var growth_days_passed = current_day - starting_day
+	var state_index = mini(growth_days_passed, 4) + 1
+
 	current_grow_state = state_index
-	
-	var name = DataTypes.GrowthState.keys()[current_grow_state]
-	print(name)
-	
+	print("days_passed: ", growth_days_passed, " state: ", DataTypes.GrowthState.keys()[current_grow_state])
+
 	if current_grow_state == DataTypes.GrowthState.Maturity:
+		print("MATURITY REACHED - emitting")
 		crop_maturity.emit()
-		
+
 func harvest_state(starting_day: int, current_day: int) -> void:
+	print("harvest_state called - grow_state: ", DataTypes.GrowthState.keys()[current_grow_state], " days: ", current_day - starting_day, " until: ", days_until_harvest)
 	if current_grow_state == DataTypes.GrowthState.Harvesting:
 		return
-		
-	var days_passed = (current_day - starting_day) % days_until_harvest
 	
-	if days_passed == days_until_harvest - 1:
+	var days_passed = current_day - starting_day
+	
+	if days_passed >= days_until_harvest:
+		print("HARVESTING")
 		current_grow_state = DataTypes.GrowthState.Harvesting
 		crop_harvesting.emit()
 	

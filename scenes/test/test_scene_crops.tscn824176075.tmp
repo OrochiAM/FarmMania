@@ -51,9 +51,3 @@ position = Vector2(268, 266)
 [node name="Player" parent="." unique_id=1121361212 instance=ExtResource("3_s5uu4")]
 y_sort_enabled = true
 position = Vector2(197, 264)
-
-[node name="Wheat2" parent="." unique_id=1188987805 instance=ExtResource("5_eku4r")]
-position = Vector2(268, 283)
-
-[node name="Wheat3" parent="." unique_id=648693480 instance=ExtResource("5_eku4r")]
-position = Vector2(268, 300)

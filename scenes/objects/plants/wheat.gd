@@ -4,16 +4,18 @@ var wheat_harvest_scene = preload("res://scenes/objects/plants/wheat_harvest.tsc
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var watering_particles: GPUParticles2D = $WateringParticles
 @onready var flowering_particles: GPUParticles2D = $FloweringParticles
-@onready var growth_cycle_component: GrowtCycleComponent = $GrowthCycleComponent
+@onready var growth_cycle_component: GrowthCycleComponent = $GrowthCycleComponent
 @onready var hurt_component: HurtComponent = $HurtComponent
 
-var growth_state: DataTypes.GrowthState = DataTypes.GrowthState.Germination
+var growth_state: DataTypes.GrowthState = DataTypes.GrowthState.Seed
 
 func _ready() -> void:
 	watering_particles.emitting = false
 	flowering_particles.emitting = false
+	
 	hurt_component.hurt.connect(on_hurt)
 	growth_cycle_component.crop_maturity.connect(on_crop_maturity)
+	growth_cycle_component.crop_harvesting.connect(on_crop_harvesting)
 	
 func _process(delta: float) -> void:
 	growth_state = growth_cycle_component.get_current_grow_state()
@@ -32,3 +34,11 @@ func on_hurt(hit_damage: int) -> void:
 
 func on_crop_maturity() -> void:
 	flowering_particles.emitting = true
+	
+func on_crop_harvesting() -> void:
+	var wheat_harvest_instance = wheat_harvest_scene.instantiate() as Node2D
+	wheat_harvest_instance.global_position = global_position
+	print("spawning at: ", global_position)
+	print("parent: ", get_parent())
+	get_parent().add_child(wheat_harvest_instance)
+	queue_free()
