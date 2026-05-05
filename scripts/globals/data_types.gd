@@ -11,3 +11,12 @@ enum Tools {
 	PlantCabbage,
 	PlantStrawberry
 }
+
+enum GrowthState {
+	Seed, 
+	Germination,
+	Vegetative,
+	Reproduction,
+	Maturity,
+	Harvesting
+}
