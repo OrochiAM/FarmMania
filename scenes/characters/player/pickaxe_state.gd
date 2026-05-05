@@ -34,6 +34,7 @@ func _on_enter() -> void:
 		hit_component_collision_shape.position = Vector2(10, -6)
 	else: 
 		animated_sprite_2d.play("pickaxe_front")
+		hit_component_collision_shape.position = Vector2(0, 0)
 		
 	hit_component_collision_shape.disabled = false
 

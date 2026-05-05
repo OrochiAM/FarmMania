@@ -19,19 +19,19 @@ region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u6o1n"]
 atlas = ExtResource("4_4tgr1")
-region = Rect2(96, 0, 16, 16)
+region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0lmsk"]
 atlas = ExtResource("5_wmmu1")
-region = Rect2(112, 0, 16, 16)
+region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uqs55"]
 atlas = ExtResource("6_7yjab")
-region = Rect2(112, 0, 16, 16)
+region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vni4r"]
 atlas = ExtResource("7_us7qi")
-region = Rect2(96, 0, 16, 16)
+region = Rect2(80, 0, 16, 16)
 
 [node name="InventoryPanel" type="PanelContainer" unique_id=1746970411]
 offset_right = 40.0

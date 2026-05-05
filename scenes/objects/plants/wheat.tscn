@@ -1,16 +1,19 @@
 [gd_scene format=3 uid="uid://cwakkgg5rk1dp"]
 
+[ext_resource type="Script" uid="uid://ug2f7tn6x5bj" path="res://scenes/objects/plants/wheat.gd" id="1_5j4he"]
 [ext_resource type="Texture2D" uid="uid://tp33ogq7fsdf" path="res://assets/props/Wheat.png" id="1_8aa77"]
 [ext_resource type="PackedScene" uid="uid://bd43fbjs8pvp8" path="res://scenes/objects/plants/watering_particles.tscn" id="2_48yxu"]
 [ext_resource type="PackedScene" uid="uid://bmvobgejlski7" path="res://scenes/components/hurt_component.tscn" id="2_rapox"]
 [ext_resource type="PackedScene" uid="uid://c2mgnlu3my7y7" path="res://scenes/objects/plants/flowering_particles.tscn" id="3_0vyrn"]
+[ext_resource type="PackedScene" uid="uid://dacb1xkx1n0g2" path="res://scenes/components/growth_cycle_component.tscn" id="5_ye42y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0vyrn"]
 size = Vector2(16, 16)
 
 [node name="Wheat" type="Node2D" unique_id=1049649237]
+script = ExtResource("1_5j4he")
 
-[node name="Node2D" type="Sprite2D" parent="." unique_id=786487118]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=786487118]
 position = Vector2(0, -5)
 texture = ExtResource("1_8aa77")
 hframes = 6
@@ -19,6 +22,8 @@ hframes = 6
 position = Vector2(0, -1)
 
 [node name="FloweringParticles" parent="." unique_id=1114929615 instance=ExtResource("3_0vyrn")]
+
+[node name="GrowthCycleComponent" parent="." unique_id=1898937893 instance=ExtResource("5_ye42y")]
 
 [node name="HurtComponent" parent="." unique_id=1053897274 instance=ExtResource("2_rapox")]
 position = Vector2(0, -2)
