@@ -11,10 +11,11 @@
 size = Vector2(16, 16)
 
 [node name="Wheat" type="Node2D" unique_id=1049649237]
+y_sort_enabled = true
 script = ExtResource("1_5j4he")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=786487118]
-position = Vector2(0, -5)
+position = Vector2(0, -6)
 texture = ExtResource("1_8aa77")
 hframes = 6
 

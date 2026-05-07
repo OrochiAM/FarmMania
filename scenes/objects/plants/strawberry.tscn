@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ckx8dseucaken"]
+
+[ext_resource type="Script" uid="uid://cpwwga374uryh" path="res://scenes/objects/plants/strawberry.gd" id="1_502fg"]
+[ext_resource type="Texture2D" uid="uid://0vulhm2iox6e" path="res://assets/props/Strawberry.png" id="2_4bp27"]
+[ext_resource type="PackedScene" uid="uid://bd43fbjs8pvp8" path="res://scenes/objects/plants/watering_particles.tscn" id="2_502fg"]
+[ext_resource type="PackedScene" uid="uid://c2mgnlu3my7y7" path="res://scenes/objects/plants/flowering_particles.tscn" id="3_4bp27"]
+[ext_resource type="PackedScene" uid="uid://dacb1xkx1n0g2" path="res://scenes/components/growth_cycle_component.tscn" id="4_hk8so"]
+[ext_resource type="PackedScene" uid="uid://bmvobgejlski7" path="res://scenes/components/hurt_component.tscn" id="5_5s1s8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fuqpw"]
+size = Vector2(16, 16)
+
+[node name="Strawberry" type="Node2D" unique_id=83280113]
+script = ExtResource("1_502fg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=874844859]
+y_sort_enabled = true
+position = Vector2(1, -7)
+texture = ExtResource("2_4bp27")
+hframes = 6
+
+[node name="WateringParticles" parent="." unique_id=1821605134 instance=ExtResource("2_502fg")]
+position = Vector2(0, -1)
+
+[node name="FloweringParticles" parent="." unique_id=1114929615 instance=ExtResource("3_4bp27")]
+
+[node name="GrowthCycleComponent" parent="." unique_id=1898937893 instance=ExtResource("4_hk8so")]
+
+[node name="HurtComponent" parent="." unique_id=1053897274 instance=ExtResource("5_5s1s8")]
+position = Vector2(0, -2)
+tool = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=716897893]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_fuqpw")

@@ -3,8 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://d05cs2xvwxxf3" path="res://scenes/components/day_and_night_cycle_component.tscn" id="1_17gaa"]
 [ext_resource type="TileSet" uid="uid://cq0nfhhur7ymb" path="res://tilesets/game_tile_set.tres" id="2_eku4r"]
 [ext_resource type="PackedScene" uid="uid://c0efwoi58cq8q" path="res://scenes/characters/player/player.tscn" id="3_s5uu4"]
+[ext_resource type="PackedScene" uid="uid://ckx8dseucaken" path="res://scenes/objects/plants/strawberry.tscn" id="3_wou7w"]
 [ext_resource type="PackedScene" uid="uid://b0wwwcsl8wijx" path="res://scenes/ui/game_screen.tscn" id="4_f40v7"]
 [ext_resource type="PackedScene" uid="uid://cwakkgg5rk1dp" path="res://scenes/objects/plants/wheat.tscn" id="5_eku4r"]
+[ext_resource type="PackedScene" uid="uid://cb80mw5rghlkc" path="res://scenes/objects/plants/cabbage.tscn" id="6_s5uu4"]
+[ext_resource type="PackedScene" uid="uid://dmypicua164" path="res://scenes/objects/plants/pepper.tscn" id="7_f40v7"]
 
 [node name="TestSceneTilemap" type="Node2D" unique_id=313022968]
 y_sort_enabled = true
@@ -44,16 +47,21 @@ tile_set = ExtResource("2_eku4r")
 [node name="GameScreen" parent="." unique_id=2113923176 instance=ExtResource("4_f40v7")]
 layer = 3
 
-[node name="Wheat" parent="." unique_id=1049649237 instance=ExtResource("5_eku4r")]
+[node name="Crops" type="Node2D" parent="." unique_id=612875291]
 y_sort_enabled = true
+
+[node name="Strawberry" parent="Crops" unique_id=83280113 instance=ExtResource("3_wou7w")]
+position = Vector2(268, 249)
+
+[node name="Wheat" parent="Crops" unique_id=1049649237 instance=ExtResource("5_eku4r")]
 position = Vector2(268, 266)
+
+[node name="Cabbage" parent="Crops" unique_id=305783014 instance=ExtResource("6_s5uu4")]
+position = Vector2(268, 283)
+
+[node name="Pepper" parent="Crops" unique_id=1867614504 instance=ExtResource("7_f40v7")]
+position = Vector2(268, 300)
 
 [node name="Player" parent="." unique_id=1121361212 instance=ExtResource("3_s5uu4")]
 y_sort_enabled = true
 position = Vector2(197, 264)
-
-[node name="Wheat2" parent="." unique_id=1188987805 instance=ExtResource("5_eku4r")]
-position = Vector2(268, 283)
-
-[node name="Wheat3" parent="." unique_id=648693480 instance=ExtResource("5_eku4r")]
-position = Vector2(268, 300)

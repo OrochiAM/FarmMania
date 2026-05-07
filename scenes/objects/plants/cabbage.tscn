@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cb80mw5rghlkc"]
+
+[ext_resource type="Script" uid="uid://cdk5232fe1t4a" path="res://scenes/objects/plants/cabbage.gd" id="1_t5yl1"]
+[ext_resource type="Texture2D" uid="uid://chxdp1x3fjkkw" path="res://assets/props/Cabbage.png" id="2_hwsvx"]
+[ext_resource type="PackedScene" uid="uid://bd43fbjs8pvp8" path="res://scenes/objects/plants/watering_particles.tscn" id="3_7ps0l"]
+[ext_resource type="PackedScene" uid="uid://c2mgnlu3my7y7" path="res://scenes/objects/plants/flowering_particles.tscn" id="4_ru37g"]
+[ext_resource type="PackedScene" uid="uid://dacb1xkx1n0g2" path="res://scenes/components/growth_cycle_component.tscn" id="5_dswct"]
+[ext_resource type="PackedScene" uid="uid://bmvobgejlski7" path="res://scenes/components/hurt_component.tscn" id="6_d8ssk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y0xyy"]
+size = Vector2(16, 16)
+
+[node name="Cabbage" type="Node2D" unique_id=305783014]
+script = ExtResource("1_t5yl1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=275611429]
+y_sort_enabled = true
+position = Vector2(0, -3)
+texture = ExtResource("2_hwsvx")
+hframes = 6
+
+[node name="WateringParticles" parent="." unique_id=1821605134 instance=ExtResource("3_7ps0l")]
+position = Vector2(0, -1)
+
+[node name="FloweringParticles" parent="." unique_id=1114929615 instance=ExtResource("4_ru37g")]
+
+[node name="GrowthCycleComponent" parent="." unique_id=1898937893 instance=ExtResource("5_dswct")]
+
+[node name="HurtComponent" parent="." unique_id=1053897274 instance=ExtResource("6_d8ssk")]
+position = Vector2(0, -2)
+tool = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=1230591916]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_y0xyy")

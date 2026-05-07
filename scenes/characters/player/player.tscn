@@ -1158,10 +1158,11 @@ collision_layer = 2
 script = ExtResource("1_42irl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1760184816]
-position = Vector2(0, -10)
+position = Vector2(0, -5)
 sprite_frames = SubResource("SpriteFrames_0hrcy")
-animation = &"idle_right"
+animation = &"idle_front"
 autoplay = "idle_front"
+offset = Vector2(0, -5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1174020197]
 position = Vector2(0.5, -5.5)
