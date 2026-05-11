@@ -11,6 +11,7 @@
 size = Vector2(16, 16)
 
 [node name="Strawberry" type="Node2D" unique_id=83280113]
+y_sort_enabled = true
 script = ExtResource("1_502fg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=874844859]
