@@ -18,10 +18,11 @@ func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("hit"):
-		print("hit pressed in FieldCursorComponent")
-		print("selected tool: ", ToolManager.selected_tool)
-		
+	if event.is_action_pressed("remove_dirt"):
+		if ToolManager.selected_tool == DataTypes.Tools.TillGround:
+			get_cell_under_mouse()
+			remove_tilled_soil_cell()
+	elif event.is_action_pressed("hit"):
 		if ToolManager.selected_tool == DataTypes.Tools.TillGround:
 			get_cell_under_mouse()
 			add_tilled_soil_cell()
