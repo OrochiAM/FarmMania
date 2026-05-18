@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dh56vs0qqcn63" path="res://scenes/main/main_level.tscn" id="1_ubvhi"]
 [ext_resource type="PackedScene" uid="uid://d05cs2xvwxxf3" path="res://scenes/components/day_and_night_cycle_component.tscn" id="2_ubvhi"]
 [ext_resource type="PackedScene" uid="uid://c0efwoi58cq8q" path="res://scenes/characters/player/player.tscn" id="3_24sno"]
+[ext_resource type="PackedScene" uid="uid://cl0e8giqnrjlo" path="res://scenes/ui/game_menu_screen.tscn" id="4_s7l2u"]
 
 [node name="MainScene" type="Node" unique_id=1539784565]
 
@@ -24,3 +25,6 @@ position = Vector2(303, 225)
 [node name="Camera2D" type="Camera2D" parent="Game/LevelRoot/Player" unique_id=419597457]
 
 [node name="GameScreen" parent="." unique_id=2113923176 instance=ExtResource("1_ei2sf")]
+visible = false
+
+[node name="GameMenuScreen" parent="." unique_id=104748519 instance=ExtResource("4_s7l2u")]

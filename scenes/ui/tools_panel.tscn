@@ -76,6 +76,7 @@ layout_mode = 2
 [node name="ToolAxe" type="Button" parent="MarginContainer/HBoxContainer" unique_id=2141557293]
 custom_minimum_size = Vector2(26, 26)
 layout_mode = 2
+theme = ExtResource("1_2yiqu")
 theme_type_variation = &"ToolButton"
 icon = SubResource("AtlasTexture_a7ivs")
 

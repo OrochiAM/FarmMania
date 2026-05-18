@@ -45,3 +45,8 @@ func recalculate_time() -> void:
 	if current_day != day:
 		current_day = day
 		time_tick_day.emit(day)
+		
+func reset() -> void:
+	current_minute = -1
+	current_day = 0
+	set_initial_time()

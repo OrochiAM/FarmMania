@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://cl0e8giqnrjlo"]
 
 [ext_resource type="Texture2D" uid="uid://deqhmx5dijj5n" path="res://assets/ui/FarmManiaLogo.png" id="1_5slcd"]
+[ext_resource type="Texture2D" uid="uid://dhrhfivkpwcki" path="res://assets/ui/JA2.png" id="1_arotu"]
+[ext_resource type="Script" uid="uid://dgqiiixncmnni" path="res://scenes/ui/game_menu_screen.gd" id="1_jk4o3"]
+[ext_resource type="Theme" uid="uid://b1ywhqas4ly3a" path="res://scenes/ui/game_ui_theme.tres" id="3_l5nq4"]
 
 [node name="GameMenuScreen" type="CanvasLayer" unique_id=104748519]
+script = ExtResource("1_jk4o3")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=561613030]
 anchors_preset = 15
@@ -16,19 +20,33 @@ theme_override_constants/margin_top = 75
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = 6
+theme_override_constants/separation = 9
+
+[node name="Sprite2D2" type="Sprite2D" parent="MarginContainer/VBoxContainer" unique_id=155567246]
+position = Vector2(292, 158)
+scale = Vector2(2, 2)
+texture = ExtResource("1_arotu")
 
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer" unique_id=1376958981]
-position = Vector2(28, -76)
-scale = Vector2(1.5, 1.5)
+position = Vector2(56, -90.99999)
+scale = Vector2(1.7, 1.7)
 texture = ExtResource("1_5slcd")
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1030983551]
+[node name="ButtonStart" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1030983551]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
+theme = ExtResource("3_l5nq4")
+theme_type_variation = &"GameMenuButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "START"
 
-[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1330608951]
+[node name="ButtonExit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1330608951]
 layout_mode = 2
+theme = ExtResource("3_l5nq4")
+theme_type_variation = &"GameMenuButton2"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "EXIT"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonStart" to="." method="_on_button_start_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonExit" to="." method="_on_button_exit_pressed"]
