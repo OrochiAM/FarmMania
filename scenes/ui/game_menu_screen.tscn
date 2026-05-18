@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cl0e8giqnrjlo"]
+
+[ext_resource type="Texture2D" uid="uid://deqhmx5dijj5n" path="res://assets/ui/FarmManiaLogo.png" id="1_5slcd"]
+
+[node name="GameMenuScreen" type="CanvasLayer" unique_id=104748519]
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=561613030]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 75
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1178668278]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 6
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer" unique_id=1376958981]
+position = Vector2(28, -76)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_5slcd")
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1030983551]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "START"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1330608951]
+layout_mode = 2
+text = "EXIT"

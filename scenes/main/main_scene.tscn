@@ -17,10 +17,10 @@ y_sort_enabled = true
 
 [node name="MainLevel" parent="Game/LevelRoot" unique_id=1591553450 instance=ExtResource("1_ubvhi")]
 
-[node name="Player" parent="Game" unique_id=1121361212 groups=["player"] instance=ExtResource("3_24sno")]
+[node name="Player" parent="Game/LevelRoot" unique_id=1121361212 groups=["player"] instance=ExtResource("3_24sno")]
 y_sort_enabled = true
-position = Vector2(319, 87)
+position = Vector2(303, 225)
 
-[node name="Camera2D" type="Camera2D" parent="Game/Player" unique_id=1549912982]
+[node name="Camera2D" type="Camera2D" parent="Game/LevelRoot/Player" unique_id=419597457]
 
 [node name="GameScreen" parent="." unique_id=2113923176 instance=ExtResource("1_ei2sf")]
