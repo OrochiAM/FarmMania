@@ -6,6 +6,8 @@ extends Node
 @export var terrain_set: int = 0
 @export var terrain: int = 1
 
+@onready var till_sound: AudioStreamPlayer2D = $TillSound
+
 var player: Player
 var mouse_position: Vector2
 var cell_position: Vector2i
@@ -34,11 +36,12 @@ func get_cell_under_mouse() -> void:
 	local_cell_position = grass_tilemap_layer.map_to_local(cell_position)
 	distance = player.global_position.distance_to(local_cell_position)
 		
-	
 func add_tilled_soil_cell() -> void:
 	if distance < 30.0 && cell_source_id != -1:
+		till_sound.play()
 		tilled_soil_tilemap_layer.set_cells_terrain_connect([cell_position], terrain_set, terrain, true)
 
 func remove_tilled_soil_cell() -> void:
 	if distance < 30.0:
+		till_sound.play()
 		tilled_soil_tilemap_layer.set_cells_terrain_connect([cell_position], 0, -1, true)

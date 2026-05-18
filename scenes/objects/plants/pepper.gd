@@ -7,6 +7,8 @@ var pepper_harvest_scene = preload("res://scenes/objects/plants/pepper_harvest.t
 @onready var growth_cycle_component: GrowthCycleComponent = $GrowthCycleComponent
 @onready var hurt_component: HurtComponent = $HurtComponent
 
+@onready var water_sound: AudioStreamPlayer2D = $WaterSound
+
 var growth_state: DataTypes.GrowthState = DataTypes.GrowthState.Seed
 
 func _ready() -> void:
@@ -27,6 +29,7 @@ func _process(delta: float) -> void:
 #Zalivanje, moze da raste
 func on_hurt(hit_damage: int) -> void:
 	if !growth_cycle_component.is_watered:
+		water_sound.play()
 		watering_particles.emitting = true
 		await get_tree().create_timer(5.0).timeout
 		watering_particles.emitting = false

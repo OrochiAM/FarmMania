@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c2vt36ui6oebl"]
+
+[ext_resource type="AudioStream" uid="uid://bjdpsg20aux1h" path="res://assets/audio/till.ogg" id="1_bomdm"]
+
+[node name="TillSound" type="AudioStreamPlayer2D" unique_id=1698573760]
+stream = ExtResource("1_bomdm")
+bus = &"SFX"

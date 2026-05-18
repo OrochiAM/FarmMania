@@ -15,6 +15,10 @@ run/main_scene="uid://dvnb85r6vfh7x"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://c0eh8fed3eo38"
+
 [autoload]
 
 ToolManager="*uid://cyi4rnc01lfie"
@@ -37,6 +41,7 @@ window/stretch/scale_mode="integer"
 
 folder_colors={
 "res://assets/": "green",
+"res://audio/": "red",
 "res://scenes/": "teal",
 "res://scripts/": "blue",
 "res://tilesets/": "purple"

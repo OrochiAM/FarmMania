@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ddetjf7vpdu2n"]
+
+[ext_resource type="AudioStream" uid="uid://cs02dmqs78pqn" path="res://assets/audio/collectable.ogg" id="1_re6a8"]
+
+[node name="CollectableSound" type="AudioStreamPlayer2D" unique_id=1686874652]
+stream = ExtResource("1_re6a8")
+bus = &"SFX"

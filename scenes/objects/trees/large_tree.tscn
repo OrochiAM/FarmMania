@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://77vhfblpe25w" path="res://scenes/objects/trees/tree.gd" id="2_f4wgc"]
 [ext_resource type="PackedScene" uid="uid://bmvobgejlski7" path="res://scenes/components/hurt_component.tscn" id="2_wjqkr"]
 [ext_resource type="PackedScene" uid="uid://cyvinkfpap71j" path="res://scenes/components/damage_component.tscn" id="3_f4wgc"]
+[ext_resource type="PackedScene" uid="uid://d27wbf3cae5t0" path="res://audio/sfx/hit_sound.tscn" id="6_6vpey"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6vpey"]
 resource_local_to_scene = true
@@ -37,6 +38,7 @@ position = Vector2(-0.5, 4)
 shape = SubResource("RectangleShape2D_ivetc")
 
 [node name="HurtComponent" parent="." unique_id=1053897274 instance=ExtResource("2_wjqkr")]
+audio_bus_name = &""
 tool = 1
 
 [node name="HurtComponentCollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=1211436936]
@@ -46,3 +48,6 @@ debug_color = Color(0.8201887, 0.28065136, 0.72947156, 0.41960785)
 
 [node name="DamageComponent" parent="." unique_id=931009684 instance=ExtResource("3_f4wgc")]
 max_damage = 3
+
+[node name="HitSound" parent="." unique_id=1776619845 instance=ExtResource("6_6vpey")]
+bus = &"Master"

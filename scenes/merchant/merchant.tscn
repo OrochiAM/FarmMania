@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b1w61dfm56ax4" path="res://assets/merchant/merchant.png" id="2_g0wv7"]
 [ext_resource type="PackedScene" uid="uid://gjoaxprph44p" path="res://scenes/components/interactable_component.tscn" id="3_rai2e"]
 [ext_resource type="PackedScene" uid="uid://df8xswv566277" path="res://scenes/components/interactable_label_component.tscn" id="4_flfdo"]
+[ext_resource type="PackedScene" uid="uid://bw3tcm1vqfw23" path="res://audio/sfx/money_sound.tscn" id="5_g0wv7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s7qk2"]
 atlas = ExtResource("2_g0wv7")
@@ -76,3 +77,5 @@ offset_left = -16.0
 offset_top = -43.0
 offset_right = 2.0
 offset_bottom = -25.0
+
+[node name="MoneySound" parent="." unique_id=628998557 instance=ExtResource("5_g0wv7")]

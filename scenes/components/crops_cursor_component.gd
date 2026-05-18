@@ -3,6 +3,8 @@ extends Node
 
 @export var tilled_soil_tilemap_layer: TileMapLayer
 
+@onready var seed_sound: AudioStreamPlayer2D = $SeedSound
+
 var player: Player
 
 var wheat_plant_scene = preload("res://scenes/objects/plants/wheat.tscn")
@@ -39,6 +41,7 @@ func get_cell_under_mouse() -> void:
 
 func add_crop() -> void:
 	if distance < 30.0  && cell_source_id != -1 :
+		seed_sound.play()
 		
 		var crop_nodes = get_parent().find_child("CropFields").get_children()
 		for node: Node2D in crop_nodes:

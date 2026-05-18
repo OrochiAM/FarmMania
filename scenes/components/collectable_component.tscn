@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://b0b68ew2bk5x2"]
 
 [ext_resource type="Script" uid="uid://bfijwrb5oooc8" path="res://scenes/components/collectable_component.gd" id="1_14mdg"]
+[ext_resource type="PackedScene" uid="uid://ddetjf7vpdu2n" path="res://audio/sfx/collectable_sound.tscn" id="2_nhysb"]
 
 [node name="CollectableComponent" type="Area2D" unique_id=1966618043]
 collision_layer = 32
 collision_mask = 2
+audio_bus_name = &""
 script = ExtResource("1_14mdg")
+
+[node name="CollectableSound" parent="." unique_id=1686874652 instance=ExtResource("2_nhysb")]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

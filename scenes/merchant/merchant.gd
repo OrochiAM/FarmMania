@@ -3,6 +3,8 @@ extends Node2D
 @onready var interactable_component: InteractableComponent = $InteractableComponent
 @onready var interactable_label_component: Control = $InteractableLabelComponent
 
+@onready var money_sound: AudioStreamPlayer2D = $MoneySound
+
 var in_range: bool
 
 func _ready() -> void:
@@ -12,6 +14,7 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if in_range and event.is_action_pressed("interact"):
+		money_sound.play()
 		var total = InventoryManager.sell_all()
 		print("Sold everything for: $", total, " | Total money: $", InventoryManager.money)
 	

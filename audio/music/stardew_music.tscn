@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dixsufnjmmn7f"]
+
+[ext_resource type="AudioStream" uid="uid://d1ld6ogvq1xog" path="res://assets/audio/Stardew Valley OST - Settling In.ogg" id="1_5doxb"]
+
+[node name="stardew_music" type="AudioStreamPlayer2D" unique_id=1789334456]
+stream = ExtResource("1_5doxb")
+bus = &"Music"

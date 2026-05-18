@@ -5,8 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://d05cs2xvwxxf3" path="res://scenes/components/day_and_night_cycle_component.tscn" id="2_ubvhi"]
 [ext_resource type="PackedScene" uid="uid://c0efwoi58cq8q" path="res://scenes/characters/player/player.tscn" id="3_24sno"]
 [ext_resource type="PackedScene" uid="uid://cl0e8giqnrjlo" path="res://scenes/ui/game_menu_screen.tscn" id="4_s7l2u"]
+[ext_resource type="PackedScene" uid="uid://dixsufnjmmn7f" path="res://audio/music/stardew_music.tscn" id="6_l7pil"]
 
 [node name="MainScene" type="Node" unique_id=1539784565]
+
+[node name="stardew_music" parent="." unique_id=1789334456 instance=ExtResource("6_l7pil")]
+autoplay = true
 
 [node name="DayNightCycleComponent" parent="." unique_id=1193452017 instance=ExtResource("2_ubvhi")]
 

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bmvobgejlski7" path="res://scenes/components/hurt_component.tscn" id="2_msy0l"]
 [ext_resource type="PackedScene" uid="uid://cyvinkfpap71j" path="res://scenes/components/damage_component.tscn" id="3_msy0l"]
 [ext_resource type="Shader" uid="uid://df6iu325l8fld" path="res://scenes/objects/shake.gdshader" id="4_bntui"]
+[ext_resource type="PackedScene" uid="uid://d27wbf3cae5t0" path="res://audio/sfx/hit_sound.tscn" id="6_8i8v8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bntui"]
 resource_local_to_scene = true
@@ -43,3 +44,5 @@ debug_color = Color(0.80715007, 0.30917794, 0.70469147, 0.41960785)
 
 [node name="DamageComponent" parent="." unique_id=931009684 instance=ExtResource("3_msy0l")]
 max_damage = 5
+
+[node name="HitSound" parent="." unique_id=1776619845 instance=ExtResource("6_8i8v8")]

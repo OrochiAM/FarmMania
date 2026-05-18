@@ -3,6 +3,8 @@ extends Sprite2D
 @onready var hurt_component: HurtComponent = $HurtComponent
 @onready var damage_component: DamageComponent = $DamageComponent
 
+@onready var hit_sound: AudioStreamPlayer2D = $HitSound
+
 var log_scene = preload("res://scenes/objects/trees/log.tscn")
 
 func _ready() -> void:
@@ -11,6 +13,7 @@ func _ready() -> void:
 	
 func on_hurt(hit_damage) -> void:
 	damage_component.apply_damage(hit_damage)
+	hit_sound.play()
 	await get_tree().create_timer(0.5).timeout
 	material.set_shader_parameter("shake_intensity", 1.0)
 	print(material.get_shader_parameter("shake_intensity"))

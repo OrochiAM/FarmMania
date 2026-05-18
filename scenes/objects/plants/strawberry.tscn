@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c2mgnlu3my7y7" path="res://scenes/objects/plants/flowering_particles.tscn" id="3_4bp27"]
 [ext_resource type="PackedScene" uid="uid://dacb1xkx1n0g2" path="res://scenes/components/growth_cycle_component.tscn" id="4_hk8so"]
 [ext_resource type="PackedScene" uid="uid://bmvobgejlski7" path="res://scenes/components/hurt_component.tscn" id="5_5s1s8"]
+[ext_resource type="PackedScene" uid="uid://dfwtpokiowt7c" path="res://audio/sfx/water_sound.tscn" id="7_4bp27"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fuqpw"]
 size = Vector2(16, 16)
@@ -34,3 +35,5 @@ tool = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=716897893]
 position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_fuqpw")
+
+[node name="WaterSound" parent="." unique_id=374995594 instance=ExtResource("7_4bp27")]

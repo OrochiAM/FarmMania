@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://d06pnif70gu67"]
+
+[ext_resource type="AudioStream" uid="uid://bg15xxcvgdvh0" path="res://assets/audio/seed.ogg" id="1_jcrwj"]
+
+[node name="SeedSound" type="AudioStreamPlayer2D" unique_id=1291583093]
+stream = ExtResource("1_jcrwj")
+bus = &"SFX"

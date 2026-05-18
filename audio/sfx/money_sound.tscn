@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bw3tcm1vqfw23"]
+
+[ext_resource type="AudioStream" uid="uid://dgonxdq2x0uwh" path="res://assets/audio/money.ogg" id="1_3g4wm"]
+
+[node name="MoneySound" type="AudioStreamPlayer2D" unique_id=628998557]
+stream = ExtResource("1_3g4wm")
+bus = &"SFX"

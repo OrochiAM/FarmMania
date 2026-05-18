@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://k1t78dmrpxfp"]
 
+[ext_resource type="PackedScene" uid="uid://d06pnif70gu67" path="res://audio/sfx/seed_sound.tscn" id="1_hyusc"]
+
 [node name="CropsCursorComponent" type="Node" unique_id=155266166]
+
+[node name="SeedSound" parent="." unique_id=1291583093 instance=ExtResource("1_hyusc")]
