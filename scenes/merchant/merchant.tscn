@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://dja26xt57cc12"]
+
+[ext_resource type="Script" uid="uid://d3edya7aust2d" path="res://scenes/merchant/merchant.gd" id="1_5r4yi"]
+[ext_resource type="Texture2D" uid="uid://b1w61dfm56ax4" path="res://assets/merchant/merchant.png" id="2_g0wv7"]
+[ext_resource type="PackedScene" uid="uid://gjoaxprph44p" path="res://scenes/components/interactable_component.tscn" id="3_rai2e"]
+[ext_resource type="PackedScene" uid="uid://df8xswv566277" path="res://scenes/components/interactable_label_component.tscn" id="4_flfdo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7qk2"]
+atlas = ExtResource("2_g0wv7")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_760da"]
+atlas = ExtResource("2_g0wv7")
+region = Rect2(96, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkxfw"]
+atlas = ExtResource("2_g0wv7")
+region = Rect2(192, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cr47f"]
+atlas = ExtResource("2_g0wv7")
+region = Rect2(288, 0, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5sann"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7qk2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_760da")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkxfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cr47f")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5r4yi"]
+size = Vector2(33, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vqp06"]
+size = Vector2(84, 74)
+
+[node name="Merchant" type="Node2D" unique_id=1546335719]
+script = ExtResource("1_5r4yi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1134692284]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_5sann")
+animation = &"idle"
+autoplay = "idle"
+frame = 3
+frame_progress = 0.97204566
+
+[node name="StaticBody2D" type="StaticBody2D" parent="AnimatedSprite2D" unique_id=22706850]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/StaticBody2D" unique_id=9851473]
+position = Vector2(0.5, 6)
+shape = SubResource("RectangleShape2D_5r4yi")
+debug_color = Color(0.78914905, 0.3748218, 0.558691, 0.41960785)
+
+[node name="InteractableComponent" parent="." unique_id=198466792 instance=ExtResource("3_rai2e")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent" unique_id=951865720]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_vqp06")
+
+[node name="InteractableLabelComponent" parent="." unique_id=684792559 instance=ExtResource("4_flfdo")]
+offset_left = -16.0
+offset_top = -43.0
+offset_right = 2.0
+offset_bottom = -25.0

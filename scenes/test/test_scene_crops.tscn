@@ -8,12 +8,12 @@
 [ext_resource type="Script" uid="uid://b6gfd0eoydxep" path="res://scenes/components/field_cursor_component.gd" id="4_wou7w"]
 [ext_resource type="PackedScene" uid="uid://k1t78dmrpxfp" path="res://scenes/components/crops_cursor_component.tscn" id="7_wou7w"]
 [ext_resource type="Script" uid="uid://156jsx54i2kx" path="res://scenes/components/crops_cursor_component.gd" id="8_5ko52"]
+[ext_resource type="PackedScene" uid="uid://dja26xt57cc12" path="res://scenes/merchant/merchant.tscn" id="9_5ko52"]
 
 [node name="TestSceneTilemap" type="Node2D" unique_id=313022968]
 y_sort_enabled = true
 
 [node name="DayNightCycleComponent" parent="." unique_id=1193452017 instance=ExtResource("1_17gaa")]
-visible = false
 
 [node name="GameTileMap" type="Node2D" parent="." unique_id=978977903]
 y_sort_enabled = true
@@ -65,3 +65,6 @@ layer = 3
 [node name="CropsCursorComponent" parent="." unique_id=155266166 node_paths=PackedStringArray("tilled_soil_tilemap_layer") instance=ExtResource("7_wou7w")]
 script = ExtResource("8_5ko52")
 tilled_soil_tilemap_layer = NodePath("../GameTileMap/TilledDirt")
+
+[node name="Merchant" parent="." unique_id=1546335719 instance=ExtResource("9_5ko52")]
+position = Vector2(350, 239)
