@@ -29,7 +29,7 @@ texture = ExtResource("1_arotu")
 
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer" unique_id=1376958981]
 position = Vector2(56, -90.99999)
-scale = Vector2(1.7, 1.7)
+scale = Vector2(2, 2)
 texture = ExtResource("1_5slcd")
 
 [node name="ButtonStart" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1030983551]

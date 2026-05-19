@@ -27,6 +27,7 @@ y_sort_enabled = true
 position = Vector2(303, 225)
 
 [node name="Camera2D" type="Camera2D" parent="Game/LevelRoot/Player" unique_id=419597457]
+zoom = Vector2(2, 2)
 
 [node name="GameScreen" parent="." unique_id=2113923176 instance=ExtResource("1_ei2sf")]
 visible = false

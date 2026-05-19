@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Stardew Valley OST - Settling In.ogg-f017b131
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
