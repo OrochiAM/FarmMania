@@ -6,9 +6,9 @@
 [node name="CollectableComponent" type="Area2D" unique_id=1966618043]
 collision_layer = 32
 collision_mask = 2
-audio_bus_name = &""
 script = ExtResource("1_14mdg")
 
 [node name="CollectableSound" parent="." unique_id=1686874652 instance=ExtResource("2_nhysb")]
+volume_db = 3.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

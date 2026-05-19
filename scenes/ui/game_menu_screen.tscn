@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dhrhfivkpwcki" path="res://assets/ui/JA2.png" id="1_arotu"]
 [ext_resource type="Script" uid="uid://dgqiiixncmnni" path="res://scenes/ui/game_menu_screen.gd" id="1_jk4o3"]
 [ext_resource type="Theme" uid="uid://b1ywhqas4ly3a" path="res://scenes/ui/game_ui_theme.tres" id="3_l5nq4"]
+[ext_resource type="PackedScene" uid="uid://bff5r3unofwnf" path="res://audio/sfx/victory_sound.tscn" id="5_vrg0q"]
 
 [node name="GameMenuScreen" type="CanvasLayer" unique_id=104748519]
 script = ExtResource("1_jk4o3")
@@ -14,7 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_top = 75
+theme_override_constants/margin_top = 90
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1178668278]
 layout_mode = 2
@@ -28,7 +29,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("1_arotu")
 
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer" unique_id=1376958981]
-position = Vector2(56, -90.99999)
+position = Vector2(67, -91)
 scale = Vector2(2, 2)
 texture = ExtResource("1_5slcd")
 
@@ -39,6 +40,9 @@ size_flags_vertical = 0
 theme = ExtResource("3_l5nq4")
 theme_type_variation = &"GameMenuButton"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/h_separation = 0
+theme_override_font_sizes/font_size = 16
 text = "START"
 
 [node name="ButtonExit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1330608951]
@@ -47,6 +51,12 @@ theme = ExtResource("3_l5nq4")
 theme_type_variation = &"GameMenuButton2"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "EXIT"
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=76732710]
+layout_mode = 2
+theme = ExtResource("3_l5nq4")
+
+[node name="VictorySound" parent="." unique_id=549250318 instance=ExtResource("5_vrg0q")]
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonStart" to="." method="_on_button_start_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonExit" to="." method="_on_button_exit_pressed"]

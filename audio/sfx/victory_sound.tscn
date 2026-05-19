@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bff5r3unofwnf"]
+
+[ext_resource type="AudioStream" uid="uid://dggrwym1u2dxo" path="res://assets/audio/victory.ogg" id="1_oynm1"]
+
+[node name="VictorySound" type="AudioStreamPlayer2D" unique_id=549250318]
+stream = ExtResource("1_oynm1")
+bus = &"SFX"

@@ -38,7 +38,6 @@ position = Vector2(-0.5, 4)
 shape = SubResource("RectangleShape2D_ivetc")
 
 [node name="HurtComponent" parent="." unique_id=1053897274 instance=ExtResource("2_wjqkr")]
-audio_bus_name = &""
 tool = 1
 
 [node name="HurtComponentCollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=1211436936]
@@ -50,4 +49,3 @@ debug_color = Color(0.8201887, 0.28065136, 0.72947156, 0.41960785)
 max_damage = 3
 
 [node name="HitSound" parent="." unique_id=1776619845 instance=ExtResource("6_6vpey")]
-bus = &"Master"

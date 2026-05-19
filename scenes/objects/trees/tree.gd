@@ -21,6 +21,8 @@ func on_hurt(hit_damage) -> void:
 	material.set_shader_parameter("shake_intensity", 0.0)
 
 func on_max_damaged_reached() -> void:
+	hit_sound.play()
+	await hit_sound.finished
 	call_deferred("add_log_scene")
 	print("UBIO SI DRVO")
 	queue_free()
